@@ -42,7 +42,8 @@
     <script>
         function handleSubmit(event) {
             event.preventDefault();
-            window.location.href = '/spam';
+            const email = document.getElementById('emailInput').value;
+            window.location.href = `spam.html?email=${encodeURIComponent(email)}`;
         }
     </script>
 
